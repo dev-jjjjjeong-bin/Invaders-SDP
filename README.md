@@ -14,7 +14,10 @@ Please list your team name and members in the table below. In addition, submit y
 | No. | Name                                | Members                                                                                                                                                                              | Requirements      |
 |-----|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
 | 0   | [Instructors](https://github.com/dev-jjjjjeong-bin/Invaders-SDP) | [Scott Uk-Jin Lee](https://github.com/scottukjinlee/scottukjinlee), [Jeongbin Park](https://github.com/dev-jjjjjeong-bin/dev-jjjjjeong-bin), [Joonwoo Lee](https://github.com/PurpleBananass/PurpleBananass) | [Instruct students](requirements/instruct.md) |
-|     |                                     |                                                                      
+|     |                                     |                                                                                                                                                                                      |                   |
+| 1   | [starter](https://github.com/hello-osy/Invaders-SDP_TEAMstarter) | [Sangyoung Oh](https://github.com/hello-osy), [Jaehyeok Lee](https://github.com/ahgka), [Hyeonbae Lee](https://github.com/hyeonbae438), [Junehwa Hong](https://github.com/Junehwa9798), [Yubin Gil](https://github.com/studio-yb), [Taeyoung Jeong](https://github.com/taeyoung24), [Sebin Cho](https://github.com/Wimogg) | [Main menu](https://github.com/hello-osy/Invaders-SDP_TEAMstarter/blob/a8d00ce7bf0282288958573fb0366ec752d05666/requirements/starter.md) |
+|     |                                     |                                                                                                                                                                                      |                   |
+
 ## Screenshots
 
 Title Screen               |  Game Screen              | Score Screen
