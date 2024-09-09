@@ -15,7 +15,8 @@ Please list your team name and members in the table below. In addition, submit y
 |-----|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
 | 0   | [Instructors](https://github.com/dev-jjjjjeong-bin/Invaders-SDP) | [Scott Uk-Jin Lee](https://github.com/scottukjinlee/scottukjinlee), [Jeongbin Park](https://github.com/dev-jjjjjeong-bin/dev-jjjjjeong-bin), [Joonwoo Lee](https://github.com/PurpleBananass/PurpleBananass) | [Instruct students](requirements/instruct.md) |
 |     |                                     |                                                                                                                                                                                      |                   |
-
+| 1   | [starter](https://github.com/hello-osy/TEAMstarter) | [오상영](https://github.com/hello-osy), [이재혁](https://github.com/ahgka), [이현배](https://github.com/hyeonbae438), [홍준화](https://github.com/Junehwa9798), [길유빈](https://github.com/studio-yb), [정태영](https://github.com/taeyoung24), [조세빈](https://github.com/Wimogg) | [Instruct students](https://github.com/hello-osy/Invaders-SDP_TEAMstarter.git/requirements/instruct.md) |
+|     |                                     |                                                                                                                                                                                      |                   |
 
 ## Screenshots
 
