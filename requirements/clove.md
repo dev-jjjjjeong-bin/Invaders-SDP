@@ -1,43 +1,42 @@
 # Instructors
 
 ## Team Introduction
-C언어를 사랑하는 청년들
+Young people who love the C language
 
 - Team Leader
-  - `석민준`
-    - 역할 : 팀원 관리 및 깃 레포지터리 전체 관리
+    - Seok Minjun
+    Role: Team management and overall Git repository management
 - Team member
-  - `서동준`
-    - 역할 : 업적
-  - `송우진`
-    - 역할 : 기록
-  - `류제무`
-    - 역할 : 기록
-  - `한준혁`
-    - 역할 : 업적
-  - `한륜헌`
-    - 역할 : 기록
-
+  - Seo Dongjun
+    Role: Achievement conditions description
+  - Song Woojin
+    Role: Enter player records into a file and manage scores or achievements
+  - Ryu Jemu
+    Role: Responsible for calculating game scores based on factors such as bullets, play-tiem, etc.
+  - Han Junhyeok
+    Role: Management of saving and tracking in the achievement system
+  - Han Ryunheon
+    Role: Managing game score and develop rank system
+  
 ## Team Requirements
-  - 기록 및 업적 시스템
-
-### - Instruct
-게임 플레이 중 달성하는 도전과제 및 얻는 점수에 대한 전반적인 관리
+  Recordkeeping and achievement system
+- Instruct
+  Overall management of challenges achieved and scores earned during gameplay
 
 ## Detailed Requirements
-  1. 점수 산정 : 게임 플레이를 통해 얻는 점수 관리
-  2. 점수 랭킹 : 산정한 점수를 이용한 랭킹
-  3. 도전과제 : 게임 플레이 중 특정한 동작을 통해 달성할 수 있는 과제
-  4. 저장 시스템 : 점수나 도전과제 진행도 등을 관리
-  5. 히든 업적 : 특정한 업적을 달성시 추가로 도전할 수 있도록 해금되는 업적
+  1. Score Calculation: Management of scores earned through gameplay
+  2. Score Ranking: Rankings based on calculated scores
+  3. Achievements: Challenges that can be achieved through specific actions during gameplay
+  4. Save System: Management of scores and achievement progress
+  5. Hidden Achievements: Additional challenges unlocked after completing specific achievements
 
 ## Dependency
-  1. 도전과제를 달성했을 때 작동하는 함수 (OnAchivementAcquire)
-     - 시각 효과
-     - 사운드 효과
-     - 화폐 지급
-  2. 점수 산정을 끝냈을 때 작동하는 함수 (OnScoreCalculated)
-      - 시각 효과
-      - 사운드 효과
-      - 화폐 지급
-  3. 레벨 또는 2인용 모드에 따른 점수 산정 방식
+  1. Function triggered when an achievement is acquired (OnAchievementAcquire)
+    Visual effects
+    Sound effects
+    Currency reward
+  2. Function triggered after score calculation (OnScoreCalculated)
+    Visual effects
+    Sound effects
+    Currency reward
+  3. Score calculation method based on level or two-player mode
