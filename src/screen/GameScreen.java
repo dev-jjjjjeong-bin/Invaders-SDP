@@ -1,6 +1,5 @@
 package screen;
 
-import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.HashSet;
 import java.util.Set;
@@ -325,8 +324,8 @@ public class GameScreen extends Screen {
 						this.enemyShipFormation.destroy(enemyShip);
 						recyclable.add(bullet);
 
-						//enemyShip이 아군 Bullet과 닿았을 때 보라색 Enemyship이라면 Item이 나옴
-						if(enemyShip.getColor() == Color.MAGENTA) {
+						//enemyShip이 아군 Bullit과 닿으면 Item이 30% 확률로 Item이 나옴
+						if(Math.random() < 0.3) {
 							// 아이템 생성
 							Item item = ItemPool.getBullet(enemyShip.getPositionX(), enemyShip.getPositionY(), 5, 1);
 							this.items.add(item);

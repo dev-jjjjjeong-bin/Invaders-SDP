@@ -42,10 +42,7 @@ public class EnemyShip extends Entity {
 	 */
 	public EnemyShip(final int positionX, final int positionY,
 			final SpriteType spriteType) {
-
-		/** Changed to use setColor to determine color */
-
-		super(positionX, positionY, 12 * 2, 8 * 2, setColor());
+		super(positionX, positionY, 12 * 2, 8 * 2, Color.WHITE);
 
 		this.spriteType = spriteType;
 		this.animationCooldown = Core.getCooldown(500);
@@ -152,11 +149,4 @@ public class EnemyShip extends Entity {
 	public final boolean isDestroyed() {
 		return this.isDestroyed;
 	}
-
-	/** Change color with a certain probability */
-
-	private static Color setColor() {
-		return Math.random() < 0.1 ? Color.MAGENTA : Color.WHITE; // 10% 확률로 보라색 반환
-	}
-
-	}
+}
