@@ -81,34 +81,29 @@ public class TitleScreen extends Screen {
 		super.update();
 
 		draw();
-		if (this.selectionCooldown.checkFinished()
-				&& this.inputDelay.checkFinished()) {
-			if (inputManager.isKeyDown(KeyEvent.VK_UP)
-					|| inputManager.isKeyDown(KeyEvent.VK_W)) {
+		if (this.selectionCooldown.checkFinished() && this.inputDelay.checkFinished()) {
+			if (inputManager.isKeyDown(KeyEvent.VK_UP) || inputManager.isKeyDown(KeyEvent.VK_W)) {
 				previousMenuItem();
 				this.selectionCooldown.reset();
 				// Sound Operator
 				SoundManager.getInstance().playES("menuSelect_es");
 			}
-			if (inputManager.isKeyDown(KeyEvent.VK_DOWN)
-					|| inputManager.isKeyDown(KeyEvent.VK_S)) {
+			if (inputManager.isKeyDown(KeyEvent.VK_DOWN) || inputManager.isKeyDown(KeyEvent.VK_S)) {
 				nextMenuItem();
 				this.selectionCooldown.reset();
 				// Sound Operator
 				SoundManager.getInstance().playES("menuSelect_es");
 			}
 
-			// produced by Starter
+			// 2인 플레이어 모드 선택
 			if (returnCode == 2) {
-				if (inputManager.isKeyDown(KeyEvent.VK_LEFT)
-						|| inputManager.isKeyDown(KeyEvent.VK_A)) {
+				if (inputManager.isKeyDown(KeyEvent.VK_LEFT) || inputManager.isKeyDown(KeyEvent.VK_A)) {
 					moveMenuLeft();
 					this.selectionCooldown.reset();
 					// Sound Operator
 					SoundManager.getInstance().playES("menuSelect_es");
 				}
-				if (inputManager.isKeyDown(KeyEvent.VK_RIGHT)
-						|| inputManager.isKeyDown(KeyEvent.VK_D)) {
+				if (inputManager.isKeyDown(KeyEvent.VK_RIGHT) || inputManager.isKeyDown(KeyEvent.VK_D)) {
 					moveMenuRight();
 					this.selectionCooldown.reset();
 					// Sound Operator
@@ -116,33 +111,34 @@ public class TitleScreen extends Screen {
 				}
 			}
 
-			if(returnCode == 4) {
-				if (inputManager.isKeyDown(KeyEvent.VK_LEFT)
-						|| inputManager.isKeyDown(KeyEvent.VK_A)) {
+			if (returnCode == 4) {
+				if (inputManager.isKeyDown(KeyEvent.VK_LEFT) || inputManager.isKeyDown(KeyEvent.VK_A)) {
 					nextMerchantState();
 					this.selectionCooldown.reset();
 					// Sound Operator
 					SoundManager.getInstance().playES("menuSelect_es");
 				}
-				if (inputManager.isKeyDown(KeyEvent.VK_RIGHT)
-						|| inputManager.isKeyDown(KeyEvent.VK_D)) {
+				if (inputManager.isKeyDown(KeyEvent.VK_RIGHT) || inputManager.isKeyDown(KeyEvent.VK_D)) {
 					previousMerchantState();
 					this.selectionCooldown.reset();
 					// Sound Operator
 					SoundManager.getInstance().playES("menuSelect_es");
 				}
-
 			}
 
-			if (inputManager.isKeyDown(KeyEvent.VK_SPACE))
-				if(returnCode == 4) {
+			if (inputManager.isKeyDown(KeyEvent.VK_SPACE)) {
+				if (returnCode == 4) {
 					teststatUpgrade();
 					testCoinDiscounter();
 					this.selectionCooldown.reset();
+				 // 현재 화면을 종료하여 다음 화면으로 전환
+				} else {
+					this.isRunning = false;
 				}
-				else this.isRunning = false;
+			}
 		}
 	}
+
 	// Use later if needed. -Starter
 	// public int getPnumSelectionCode() {return this.pnumSelectionCode;}
 
@@ -182,22 +178,24 @@ public class TitleScreen extends Screen {
 			this.returnCode = 0; // from '2 player mode' to 'Exit' (starter)
 		else if (this.returnCode == 0)
 			this.returnCode = 2; // from 'Exit' to 'Play' (starter)
+		else if (this.returnCode == 2)
+			this.returnCode = 3; // from 'Play' to '2 Player Mode' (starter)
 		else
 			this.returnCode++; // go next (starter)
 	}
 
-	/**
-	 * Shifts the focus to the previous menu item.
-	 */
 	private void previousMenuItem() {
-		this.merchantState =0;
+		this.merchantState = 0;
 		if (this.returnCode == 0)
 			this.returnCode = 5; // from 'Exit' to '2 player mode' (starter) // Team Clover changed values because recordMenu added
 		else if (this.returnCode == 2)
 			this.returnCode = 0; // from 'Play' to 'Exit' (starter)
+		else if (this.returnCode == 3)
+			this.returnCode = 2; // from '2 Player Mode' to 'Play' (starter)
 		else
 			this.returnCode--; // go previous (starter)
 	}
+
 
 	// left and right move -- produced by Starter
 	private void moveMenuLeft() {
